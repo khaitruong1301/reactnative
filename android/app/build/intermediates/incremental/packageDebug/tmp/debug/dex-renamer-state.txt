@@ -1,0 +1,4 @@
+#Sat Feb 29 14:22:45 ICT 2020
+base.0=/Users/user/Desktop/reactnative01/reactnative01/android/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex
