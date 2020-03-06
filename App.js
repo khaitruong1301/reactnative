@@ -8,6 +8,10 @@
 
 import React from 'react';
 import { View, Text, Image, Button, TouchableOpacity, TextInput, StyleSheet, Dimensions, Platform } from 'react-native';
+import EasyGridComponent from './src/components/EasyGridComponent';
+
+import Header from './src/components/Header';
+import HeaderC from './src/components/HeaderC';
 
 
 const widthDevice = Dimensions.get('window').width; //Lấy chiều rộng thiết bị
@@ -18,121 +22,126 @@ const App = () => { //Nội dung màn hình chính của app => return()
 
   return (
     <>
-      <View style={{ flex: 1 }}>
-        <Text style={{ paddingLeft: 20, paddingTop: 20, fontSize: 30, fontWeight: 'bold' }}>Nike</Text>
-      </View>
-      <View style={{ flex: 9 }}>
-        {/* row 1 */}
-        <View style={{ flex: 1, flexDirection: 'row',marginTop:5  }}>
-          <View style={{ flex: 1, backgroundColor: '#eee',borderRadius:15,marginLeft:15}}>
-            <View style={{ flex: 1, justifyContent: 'flex-end', flexDirection: 'row', alignItems: 'flex-start', padding: 15 }}>
-              <Image style={{ width: 30, height: 30 }} resizeMode="contain" source={require('./src/assets/Img/heart.png')} />
-            </View>
-            <View style={{ flex: 2, flexDirection: 'row', justifyContent: 'center' }}>
-              <Image style={{ width: 150, height: 75 }} source={require('./src/assets/Img/shoe1.jpg')} />
-            </View>
-            <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'flex-start' }}>
-              <Text style={{ fontWeight:'bold', fontSize: 20, marginLeft: 15 }}>GIÀY NIKE 01</Text>
-            </View>
-            <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'flex-start' }}>
-              <Text style={{ fontWeight:'bold', fontSize: 20, marginLeft: 15, marginBottom: 15 }}>100$</Text>
-            </View>
-          </View>
-          <View style={{ flex: 1,marginRight:15}}>
-          <View style={{ flex: 1, backgroundColor: '#eee',borderRadius:15,marginLeft:15 }}>
-            <View style={{ flex: 1, justifyContent: 'flex-end', flexDirection: 'row', alignItems: 'flex-start', padding: 15 }}>
-              <Image style={{ width: 30, height: 30 }} resizeMode="contain" source={require('./src/assets/Img/heart.png')} />
-            </View>
-            <View style={{ flex: 2, flexDirection: 'row', justifyContent: 'center' }}>
-              <Image style={{ width: 150, height: 75 }} source={require('./src/assets/Img/shoe1.jpg')} />
-            </View>
-            <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'flex-start' }}>
-              <Text style={{ fontWeight:'bold', fontSize: 20, marginLeft: 15 }}>GIÀY NIKE 01</Text>
-            </View>
-            <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'flex-start' }}>
-              <Text style={{ fontWeight:'bold', fontSize: 20, marginLeft: 15, marginBottom: 15 }}>100$</Text>
-            </View>
-            </View>
-           
-          </View>
-        </View>
-  
-        {/* row 2 */}
-        <View style={{ flex: 1, flexDirection: 'row',marginTop:5  }}>
-          <View style={{ flex: 1, backgroundColor: '#eee',borderRadius:15,marginLeft:15}}>
-            <View style={{ flex: 1, justifyContent: 'flex-end', flexDirection: 'row', alignItems: 'flex-start', padding: 15 }}>
-              <Image style={{ width: 30, height: 30 }} resizeMode="contain" source={require('./src/assets/Img/heart.png')} />
-            </View>
-            <View style={{ flex: 2, flexDirection: 'row', justifyContent: 'center' }}>
-              <Image style={{ width: 150, height: 75 }} source={require('./src/assets/Img/shoe1.jpg')} />
-            </View>
-            <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'flex-start' }}>
-              <Text style={{ fontWeight:'bold', fontSize: 20, marginLeft: 15 }}>GIÀY NIKE 01</Text>
-            </View>
-            <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'flex-start' }}>
-              <Text style={{ fontWeight:'bold', fontSize: 20, marginLeft: 15, marginBottom: 15 }}>100$</Text>
-            </View>
-          </View>
-          <View style={{ flex: 1,marginRight:15}}>
-          <View style={{ flex: 1, backgroundColor: '#eee',borderRadius:15,marginLeft:15 }}>
-            <View style={{ flex: 1, justifyContent: 'flex-end', flexDirection: 'row', alignItems: 'flex-start', padding: 15 }}>
-              <Image style={{ width: 30, height: 30 }} resizeMode="contain" source={require('./src/assets/Img/heart.png')} />
-            </View>
-            <View style={{ flex: 2, flexDirection: 'row', justifyContent: 'center' }}>
-              <Image style={{ width: 150, height: 75 }} source={require('./src/assets/Img/shoe1.jpg')} />
-            </View>
-            <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'flex-start' }}>
-              <Text style={{ fontWeight:'bold', fontSize: 20, marginLeft: 15 }}>GIÀY NIKE 01</Text>
-            </View>
-            <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'flex-start' }}>
-              <Text style={{ fontWeight:'bold', fontSize: 20, marginLeft: 15, marginBottom: 15 }}>100$</Text>
-            </View>
-            </View>
-           
-          </View>
-        </View>
-
-        {/* row 3 */}
-        <View style={{ flex: 1, flexDirection: 'row',marginTop:5 }}>
-          <View style={{ flex: 1, backgroundColor: '#eee',borderRadius:15,marginLeft:15}}>
-            <View style={{ flex: 1, justifyContent: 'flex-end', flexDirection: 'row', alignItems: 'flex-start', padding: 15 }}>
-              <Image style={{ width: 30, height: 30 }} resizeMode="contain" source={require('./src/assets/Img/heart.png')} />
-            </View>
-            <View style={{ flex: 2, flexDirection: 'row', justifyContent: 'center' }}>
-              <Image style={{ width: 150, height: 75 }} source={require('./src/assets/Img/shoe1.jpg')} />
-            </View>
-            <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'flex-start' }}>
-              <Text style={{ fontWeight:'bold', fontSize: 20, marginLeft: 15 }}>GIÀY NIKE 01</Text>
-            </View>
-            <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'flex-start' }}>
-              <Text style={{ fontWeight:'bold', fontSize: 20, marginLeft: 15, marginBottom: 15 }}>100$</Text>
-            </View>
-          </View>
-          <View style={{ flex: 1,marginRight:15}}>
-          <View style={{ flex: 1, backgroundColor: '#eee',borderRadius:15,marginLeft:15 }}>
-            <View style={{ flex: 1, justifyContent: 'flex-end', flexDirection: 'row', alignItems: 'flex-start', padding: 15 }}>
-              <Image style={{ width: 30, height: 30 }} resizeMode="contain" source={require('./src/assets/Img/heart.png')} />
-            </View>
-            <View style={{ flex: 2, flexDirection: 'row', justifyContent: 'center' }}>
-              <Image style={{ width: 150, height: 75 }} source={require('./src/assets/Img/shoe1.jpg')} />
-            </View>
-            <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'flex-start' }}>
-              <Text style={{ fontWeight:'bold', fontSize: 20, marginLeft: 15 }}>GIÀY NIKE 01</Text>
-            </View>
-            <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'flex-start' }}>
-              <Text style={{ fontWeight:'bold', fontSize: 20, marginLeft: 15, marginBottom: 15 }}>100$</Text>
-            </View>
-            </View>
-           
-          </View>
-        </View>
-      </View>
+      {/* <EasyGridComponent /> */}
+      <Header />
+      <HeaderC />
     </>
   );
 
 };
 
 export default App;
+
+
+// <View style={{ flex: 1 }}>
+//         <Text style={{ paddingLeft: 20, paddingTop: 20, fontSize: 30, fontWeight: 'bold' }}>Nike</Text>
+//       </View>
+//       <View style={{ flex: 9 }}>
+//         {/* row 1 */}
+//         <View style={{ flex: 1, flexDirection: 'row',marginTop:5  }}>
+//           <View style={{ flex: 1, backgroundColor: '#eee',borderRadius:15,marginLeft:15}}>
+//             <View style={{ flex: 1, justifyContent: 'flex-end', flexDirection: 'row', alignItems: 'flex-start', padding: 15 }}>
+//               <Image style={{ width: 30, height: 30 }} resizeMode="contain" source={require('./src/assets/Img/heart.png')} />
+//             </View>
+//             <View style={{ flex: 2, flexDirection: 'row', justifyContent: 'center' }}>
+//               <Image style={{ width: 150, height: 75 }} source={require('./src/assets/Img/shoe1.jpg')} />
+//             </View>
+//             <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'flex-start' }}>
+//               <Text style={{ fontWeight:'bold', fontSize: 20, marginLeft: 15 }}>GIÀY NIKE 01</Text>
+//             </View>
+//             <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'flex-start' }}>
+//               <Text style={{ fontWeight:'bold', fontSize: 20, marginLeft: 15, marginBottom: 15 }}>100$</Text>
+//             </View>
+//           </View>
+//           <View style={{ flex: 1,marginRight:15}}>
+//           <View style={{ flex: 1, backgroundColor: '#eee',borderRadius:15,marginLeft:15 }}>
+//             <View style={{ flex: 1, justifyContent: 'flex-end', flexDirection: 'row', alignItems: 'flex-start', padding: 15 }}>
+//               <Image style={{ width: 30, height: 30 }} resizeMode="contain" source={require('./src/assets/Img/heart.png')} />
+//             </View>
+//             <View style={{ flex: 2, flexDirection: 'row', justifyContent: 'center' }}>
+//               <Image style={{ width: 150, height: 75 }} source={require('./src/assets/Img/shoe1.jpg')} />
+//             </View>
+//             <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'flex-start' }}>
+//               <Text style={{ fontWeight:'bold', fontSize: 20, marginLeft: 15 }}>GIÀY NIKE 01</Text>
+//             </View>
+//             <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'flex-start' }}>
+//               <Text style={{ fontWeight:'bold', fontSize: 20, marginLeft: 15, marginBottom: 15 }}>100$</Text>
+//             </View>
+//             </View>
+           
+//           </View>
+//         </View>
+  
+//         {/* row 2 */}
+//         <View style={{ flex: 1, flexDirection: 'row',marginTop:5  }}>
+//           <View style={{ flex: 1, backgroundColor: '#eee',borderRadius:15,marginLeft:15}}>
+//             <View style={{ flex: 1, justifyContent: 'flex-end', flexDirection: 'row', alignItems: 'flex-start', padding: 15 }}>
+//               <Image style={{ width: 30, height: 30 }} resizeMode="contain" source={require('./src/assets/Img/heart.png')} />
+//             </View>
+//             <View style={{ flex: 2, flexDirection: 'row', justifyContent: 'center' }}>
+//               <Image style={{ width: 150, height: 75 }} source={require('./src/assets/Img/shoe1.jpg')} />
+//             </View>
+//             <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'flex-start' }}>
+//               <Text style={{ fontWeight:'bold', fontSize: 20, marginLeft: 15 }}>GIÀY NIKE 01</Text>
+//             </View>
+//             <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'flex-start' }}>
+//               <Text style={{ fontWeight:'bold', fontSize: 20, marginLeft: 15, marginBottom: 15 }}>100$</Text>
+//             </View>
+//           </View>
+//           <View style={{ flex: 1,marginRight:15}}>
+//           <View style={{ flex: 1, backgroundColor: '#eee',borderRadius:15,marginLeft:15 }}>
+//             <View style={{ flex: 1, justifyContent: 'flex-end', flexDirection: 'row', alignItems: 'flex-start', padding: 15 }}>
+//               <Image style={{ width: 30, height: 30 }} resizeMode="contain" source={require('./src/assets/Img/heart.png')} />
+//             </View>
+//             <View style={{ flex: 2, flexDirection: 'row', justifyContent: 'center' }}>
+//               <Image style={{ width: 150, height: 75 }} source={require('./src/assets/Img/shoe1.jpg')} />
+//             </View>
+//             <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'flex-start' }}>
+//               <Text style={{ fontWeight:'bold', fontSize: 20, marginLeft: 15 }}>GIÀY NIKE 01</Text>
+//             </View>
+//             <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'flex-start' }}>
+//               <Text style={{ fontWeight:'bold', fontSize: 20, marginLeft: 15, marginBottom: 15 }}>100$</Text>
+//             </View>
+//             </View>
+           
+//           </View>
+//         </View>
+
+//         {/* row 3 */}
+//         <View style={{ flex: 1, flexDirection: 'row',marginTop:5 }}>
+//           <View style={{ flex: 1, backgroundColor: '#eee',borderRadius:15,marginLeft:15}}>
+//             <View style={{ flex: 1, justifyContent: 'flex-end', flexDirection: 'row', alignItems: 'flex-start', padding: 15 }}>
+//               <Image style={{ width: 30, height: 30 }} resizeMode="contain" source={require('./src/assets/Img/heart.png')} />
+//             </View>
+//             <View style={{ flex: 2, flexDirection: 'row', justifyContent: 'center' }}>
+//               <Image style={{ width: 150, height: 75 }} source={require('./src/assets/Img/shoe1.jpg')} />
+//             </View>
+//             <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'flex-start' }}>
+//               <Text style={{ fontWeight:'bold', fontSize: 20, marginLeft: 15 }}>GIÀY NIKE 01</Text>
+//             </View>
+//             <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'flex-start' }}>
+//               <Text style={{ fontWeight:'bold', fontSize: 20, marginLeft: 15, marginBottom: 15 }}>100$</Text>
+//             </View>
+//           </View>
+//           <View style={{ flex: 1,marginRight:15}}>
+//           <View style={{ flex: 1, backgroundColor: '#eee',borderRadius:15,marginLeft:15 }}>
+//             <View style={{ flex: 1, justifyContent: 'flex-end', flexDirection: 'row', alignItems: 'flex-start', padding: 15 }}>
+//               <Image style={{ width: 30, height: 30 }} resizeMode="contain" source={require('./src/assets/Img/heart.png')} />
+//             </View>
+//             <View style={{ flex: 2, flexDirection: 'row', justifyContent: 'center' }}>
+//               <Image style={{ width: 150, height: 75 }} source={require('./src/assets/Img/shoe1.jpg')} />
+//             </View>
+//             <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'flex-start' }}>
+//               <Text style={{ fontWeight:'bold', fontSize: 20, marginLeft: 15 }}>GIÀY NIKE 01</Text>
+//             </View>
+//             <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'flex-start' }}>
+//               <Text style={{ fontWeight:'bold', fontSize: 20, marginLeft: 15, marginBottom: 15 }}>100$</Text>
+//             </View>
+//             </View>
+           
+//           </View>
+//         </View>
+//       </View>
 
 
 // const styles = StyleSheet.create({
