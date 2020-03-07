@@ -12,6 +12,9 @@ import EasyGridComponent from './src/components/EasyGridComponent';
 
 import Header from './src/components/Header';
 import HeaderC from './src/components/HeaderC';
+import DemoLoop from './src/components/DemoLoop';
+import BaiTapStateLoop from './src/components/BaiTapStateLoop';
+import DemoProps from './src/components/DemoProps';
 
 
 const widthDevice = Dimensions.get('window').width; //Lấy chiều rộng thiết bị
@@ -20,11 +23,18 @@ const heightDevice = Dimensions.get('window').height;
 
 const App = () => { //Nội dung màn hình chính của app => return()
 
+  let hocVien = {ma:1,ten:'Nguyễn Văn A',tuoi:19}
+
   return (
     <>
       {/* <EasyGridComponent /> */}
-      <Header />
-      <HeaderC />
+      {/* <Header />
+      <HeaderC /> */}
+      {/* <DemoLoop /> */}
+      {/* <BaiTapStateLoop /> */}
+      <DemoProps hocVienProp={hocVien} />
+      
+      
     </>
   );
 
