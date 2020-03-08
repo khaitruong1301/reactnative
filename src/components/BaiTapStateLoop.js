@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Text, View, Dimensions, Image, TouchableOpacity } from 'react-native';
 import { Col, Grid, Row } from 'react-native-easy-grid';
+import GlassesItem from './GlassesItem';
 
 const widthDevice = Dimensions.get('window').width;
 const heightDevice = Dimensions.get('window').height;
@@ -25,12 +26,8 @@ export default class BaiTapStateLoop extends Component {
 
     renderGlassesItem = () => {
         return this.arrProduct.map((glassesItem, index) => {
-            return <Col key={index} style={{  width: widthDevice / 3, height: 75 }}>
-                <TouchableOpacity onPress={()=>{this.changeGlassesItem(glassesItem)}}>
-                    <View>
-                        <Image style={{ width: widthDevice / 4, height: 50, margin: '10%', marginTop: '35%' }} resizeMode='stretch' source={glassesItem.url} />
-                    </View>
-                </TouchableOpacity>
+            return <Col key={index} style={{  width: widthDevice / 3, height: 75 }}>        
+                    <GlassesItem item={glassesItem} handleChangeGlasses={this.changeGlassesItem} />
             </Col>
         })
     }

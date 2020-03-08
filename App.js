@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import { View, Text, Image, Button, TouchableOpacity, TextInput, StyleSheet, Dimensions, Platform } from 'react-native';
+import { View, Text, Image, Button, TouchableOpacity, TextInput, StyleSheet, Dimensions, Platform, ScrollView } from 'react-native';
 import EasyGridComponent from './src/components/EasyGridComponent';
 
 import Header from './src/components/Header';
@@ -15,6 +15,9 @@ import HeaderC from './src/components/HeaderC';
 import DemoLoop from './src/components/DemoLoop';
 import BaiTapStateLoop from './src/components/BaiTapStateLoop';
 import DemoProps from './src/components/DemoProps';
+import FlatListDemo from './src/components/FlatListDemo';
+import SectionListDemo from './src/components/SectionListDemo';
+import ScrollViewDemo from './src/components/ScrollViewDemo';
 
 
 const widthDevice = Dimensions.get('window').width; //Lấy chiều rộng thiết bị
@@ -27,14 +30,16 @@ const App = () => { //Nội dung màn hình chính của app => return()
 
   return (
     <>
+
       {/* <EasyGridComponent /> */}
       {/* <Header />
       <HeaderC /> */}
       {/* <DemoLoop /> */}
       {/* <BaiTapStateLoop /> */}
-      <DemoProps hocVienProp={hocVien} />
-      
-      
+      {/* <DemoProps hocVienProp={hocVien} /> */}
+      {/* <FlatListDemo /> */}
+      {/* <SectionListDemo /> */}
+      <ScrollViewDemo />
     </>
   );
 

@@ -1,0 +1,28 @@
+[
+    {
+        "title": "Thông tin tài khoản",
+        "data": [
+            { "id": "1", "name": "Hồ sơ cá nhân","icon":"user" },
+            { "id": "2", "name": "Đổi mật khẩu" ,"icon":"user"}
+        ]
+    },
+    {
+        "title": "Thông tin liên hệ",
+        "data": [
+            { "id": "3", "name": "Bạn bè","icon":"user" },
+            { "id": "4", "name": "Nhóm" ,"icon":"user"},
+            { "id": "5", "name": "Kỷ niệm","icon":"user" },
+            { "id": "6", "name": "Tìm kiếm quanh đây","icon":"user"},
+            { "id": "7", "name": "Hẹn hò","icon":"user" }
+        ]
+    },
+    {
+        "title": "Cài đặt",
+        "data": [
+            { "id": "8", "name": "Trợ giúp","icon":"user" },
+            { "id": "9", "name": "Cài đặt & quyền riêng tư","icon":"user" },
+            { "id": "10", "name": "Điều khoản chính sách","icon":"user" }
+
+        ],
+    },
+]

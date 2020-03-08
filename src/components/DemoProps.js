@@ -6,7 +6,10 @@ export default class DemoProps extends Component {
     
 
     render() {
+        
         // this.props
+        this.props.hocVienProp = {ma:5,ten:'Nguyễn Thị B',tuoi:29};
+        console.log(this.props.hocVienProp)
         let {hocVienProp} = this.props;
         return (
             <View>
